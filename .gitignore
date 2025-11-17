@@ -1,5 +1,3 @@
 books
-pycache
-learn.py
-*__pycache__/*
-__pycache__/*
+learn_sort.py
+__pycache__
