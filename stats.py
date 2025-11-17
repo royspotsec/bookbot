@@ -8,6 +8,7 @@ def get_num_words (filepath) :
     print (f"Found {count} total words")
     
 
+
 def count_chars (filepath) :
     with open (filepath) as file:
         file_contents= file.read()
@@ -18,18 +19,18 @@ def count_chars (filepath) :
         for word in words :
             for charector in word :
                 charector=charector.lower()
-                if charector not in current :
-                    
-                    
+                if charector not in current :   
                     current[charector]=1
                 else  :
-                    current[charector]+=1
+                     current[charector]+=1
+        current=dict(sorted(current.items(), key = lambda item:item[1] , reverse=True))
+        for char,count in current.items() :
+            print (f"{char}: {count}")                 
+                    
 
-                    
-                    
-        print (current)                 
-                    
-                
+
+
+                   
         
                 
         
